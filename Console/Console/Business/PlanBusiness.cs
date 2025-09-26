@@ -12,13 +12,11 @@ namespace eHealthApp.Business
 {
     public class PlanBusiness
     {
-        private DataContext _context;
-        private PlanService _planService;
+        private IDataService<Plan> _planService;
 
-        public PlanBusiness(DataContext context)
+        public PlanBusiness(IDataService<Plan> context)
         {
-            _context = context;
-            _planService = new PlanService(_context);
+            _planService = context;
         }
 
         public Plan CreatePlan(Plan plan)

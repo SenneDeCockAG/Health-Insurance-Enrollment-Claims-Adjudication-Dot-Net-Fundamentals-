@@ -1,5 +1,6 @@
 ﻿
 using Console.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace eHealthApp.Services.Data;
 public class MemberService : IDataService<Member>
@@ -25,7 +26,12 @@ public class MemberService : IDataService<Member>
         _context.SaveChanges();
     }
     public Member? GetById(int id) => _context.Members.Find(id);
-    public List<Member> GetAll() => _context.Members.ToList();
+    public List<Member> GetAll() => _context.Members
+        .Include(m => m.MedicalClaims)
+        .ThenInclude(mc => mc.ClaimLines)
+        .Include(m => m.Enrollments)
+        .ThenInclude(e => e.Plan)
+        .ToList();
 }
 
 
