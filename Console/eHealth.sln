@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36518.9 d17.14
+VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "Console\Console.csproj", "{107D130C-B76F-4839-BAA3-20A3F549F212}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eHealthApp", "Console\eHealthApp.csproj", "{107D130C-B76F-4839-BAA3-20A3F549F212}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
