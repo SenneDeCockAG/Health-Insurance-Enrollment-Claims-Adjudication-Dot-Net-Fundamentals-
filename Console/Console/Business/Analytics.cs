@@ -1,12 +1,14 @@
 ﻿using Console.Business;
+using Console.Models;
+using eHealthApp.Services.Data;
 
 public class Analytics : IAnalytics
 {
-    private readonly MemberService _memberService;
+    private readonly IDataService<Member> _memberService;
 
-    public Analytics()
+    public Analytics(IDataService<Member> memberService)
     {
-        _memberService = new MemberService();
+        _memberService = memberService;
     }
 
     public bool CreateAnalyticsReport()
