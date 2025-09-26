@@ -242,4 +242,164 @@
     </Enrollments>
     <MedicalClaims />
   </Member>
+  <Member>
+    <Id>5</Id>
+    <FirstName>Barack</FirstName>
+    <LastName>Obama</LastName>
+    <DateOfBirth>2025-09-26T00:00:00</DateOfBirth>
+    <EnrollmentStart>2025-09-26T00:00:00</EnrollmentStart>
+    <EnrollmentEnd>0001-01-01T00:00:00</EnrollmentEnd>
+    <Enrollments>
+      <Enrollment>
+        <Id>5</Id>
+        <MemberId>5</MemberId>
+        <PlanId>5</PlanId>
+        <Plan>
+          <Id>5</Id>
+          <PlanCode>120</PlanCode>
+          <PlanName>Retraite à 67 ans</PlanName>
+          <MonthlyPremium>10.0</MonthlyPremium>
+          <Deductible>1000.0</Deductible>
+          <OutOfPocketMax>200.0</OutOfPocketMax>
+          <HsaEligible>false</HsaEligible>
+        </Plan>
+        <EnrollmentDate>2025-09-26T00:00:00</EnrollmentDate>
+        <TerminationDate>2026-09-26T00:00:00</TerminationDate>
+        <Status>ACTIVE</Status>
+      </Enrollment>
+    </Enrollments>
+    <MedicalClaims />
+  </Member>
+  <Member>
+    <Id>6</Id>
+    <FirstName>Barack</FirstName>
+    <LastName>Obama</LastName>
+    <DateOfBirth>2025-09-26T00:00:00</DateOfBirth>
+    <EnrollmentStart>2025-09-26T00:00:00</EnrollmentStart>
+    <EnrollmentEnd>0001-01-01T00:00:00</EnrollmentEnd>
+    <Enrollments>
+      <Enrollment>
+        <Id>6</Id>
+        <MemberId>6</MemberId>
+        <PlanId>6</PlanId>
+        <Plan>
+          <Id>6</Id>
+          <PlanCode>120</PlanCode>
+          <PlanName>Retraite à 67 ans</PlanName>
+          <MonthlyPremium>10.0</MonthlyPremium>
+          <Deductible>1000.0</Deductible>
+          <OutOfPocketMax>200.0</OutOfPocketMax>
+          <HsaEligible>false</HsaEligible>
+        </Plan>
+        <EnrollmentDate>2025-09-26T00:00:00</EnrollmentDate>
+        <TerminationDate>2026-09-26T00:00:00</TerminationDate>
+        <Status>ACTIVE</Status>
+      </Enrollment>
+    </Enrollments>
+    <MedicalClaims />
+  </Member>
+  <Member>
+    <Id>7</Id>
+    <FirstName>Barack</FirstName>
+    <LastName>Obama</LastName>
+    <DateOfBirth>2025-09-26T00:00:00</DateOfBirth>
+    <EnrollmentStart>2025-09-26T00:00:00</EnrollmentStart>
+    <EnrollmentEnd>0001-01-01T00:00:00</EnrollmentEnd>
+    <Enrollments>
+      <Enrollment>
+        <Id>7</Id>
+        <MemberId>7</MemberId>
+        <PlanId>7</PlanId>
+        <Plan>
+          <Id>7</Id>
+          <PlanCode>120</PlanCode>
+          <PlanName>Retraite à 67 ans</PlanName>
+          <MonthlyPremium>10.0</MonthlyPremium>
+          <Deductible>1000.0</Deductible>
+          <OutOfPocketMax>200.0</OutOfPocketMax>
+          <HsaEligible>false</HsaEligible>
+        </Plan>
+        <EnrollmentDate>2025-09-26T00:00:00</EnrollmentDate>
+        <TerminationDate>2026-09-26T00:00:00</TerminationDate>
+        <Status>ACTIVE</Status>
+      </Enrollment>
+    </Enrollments>
+    <MedicalClaims />
+  </Member>
+  <Member>
+    <Id>8</Id>
+    <FirstName>Barack</FirstName>
+    <LastName>Obama</LastName>
+    <DateOfBirth>2025-09-26T00:00:00</DateOfBirth>
+    <EnrollmentStart>2025-09-26T00:00:00</EnrollmentStart>
+    <EnrollmentEnd>0001-01-01T00:00:00</EnrollmentEnd>
+    <Enrollments>
+      <Enrollment>
+        <Id>8</Id>
+        <MemberId>8</MemberId>
+        <PlanId>8</PlanId>
+        <Plan>
+          <Id>8</Id>
+          <PlanCode>120</PlanCode>
+          <PlanName>Retraite à 67 ans</PlanName>
+          <MonthlyPremium>10.0</MonthlyPremium>
+          <Deductible>1000.0</Deductible>
+          <OutOfPocketMax>200.0</OutOfPocketMax>
+          <HsaEligible>false</HsaEligible>
+        </Plan>
+        <EnrollmentDate>2025-09-26T00:00:00</EnrollmentDate>
+        <TerminationDate>2026-09-26T00:00:00</TerminationDate>
+        <Status>ACTIVE</Status>
+      </Enrollment>
+    </Enrollments>
+    <MedicalClaims />
+  </Member>
+  <Member>
+    <Id>9</Id>
+    <FirstName>Alice</FirstName>
+    <LastName>Dubouis</LastName>
+    <DateOfBirth>1987-05-18T00:00:00</DateOfBirth>
+    <EnrollmentStart>2025-09-26T00:00:00</EnrollmentStart>
+    <EnrollmentEnd>0001-01-01T00:00:00</EnrollmentEnd>
+    <Enrollments />
+    <MedicalClaims />
+  </Member>
+  <Member>
+    <Id>10</Id>
+    <FirstName>Barack</FirstName>
+    <LastName>Obama</LastName>
+    <DateOfBirth>2025-09-26T00:00:00</DateOfBirth>
+    <EnrollmentStart>2025-09-26T00:00:00</EnrollmentStart>
+    <EnrollmentEnd>0001-01-01T00:00:00</EnrollmentEnd>
+    <Enrollments>
+      <Enrollment>
+        <Id>9</Id>
+        <MemberId>10</MemberId>
+        <PlanId>9</PlanId>
+        <Plan>
+          <Id>9</Id>
+          <PlanCode>120</PlanCode>
+          <PlanName>Retraite à 67 ans</PlanName>
+          <MonthlyPremium>10.0</MonthlyPremium>
+          <Deductible>1000.0</Deductible>
+          <OutOfPocketMax>200.0</OutOfPocketMax>
+          <HsaEligible>false</HsaEligible>
+        </Plan>
+        <EnrollmentDate>2025-09-26T00:00:00</EnrollmentDate>
+        <TerminationDate>2026-09-26T00:00:00</TerminationDate>
+        <Status>ACTIVE</Status>
+      </Enrollment>
+    </Enrollments>
+    <MedicalClaims />
+  </Member>
+  <Member>
+    <Id>11</Id>
+    <FirstName>Damien</FirstName>
+    <LastName>Decleire</LastName>
+    <DateOfBirth>1924-08-18T00:00:00</DateOfBirth>
+    <EnrollmentStart>2025-09-26T00:00:00</EnrollmentStart>
+    <EnrollmentEnd>0001-01-01T00:00:00</EnrollmentEnd>
+    <Enrollments />
+    <MedicalClaims />
+  </Member>
 </ArrayOfMember>

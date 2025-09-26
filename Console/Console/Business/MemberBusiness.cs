@@ -19,6 +19,10 @@ namespace eHealthApp.Business
             _service.Save(member);
             return member;
         }
+        public List<Member> ListMember()
+        {
+            return _service.GetAll();
+        }
 
         public bool DeleteMember(Member member)
         {
