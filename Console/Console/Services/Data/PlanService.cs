@@ -1,16 +1,11 @@
-﻿using eHealthApp.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Console.Models;
 
 namespace eHealthApp.Services.Data
 {
     public class PlanService : IDataService<Plan>
     {
-        private readonly DatabaseContext _context;
-        public PlanService(DatabaseContext context)
+        private readonly DataContext _context;
+        public PlanService(DataContext context)
         {
             _context = context;
         }

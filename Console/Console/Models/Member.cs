@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace eHealthApp.Models
+namespace Console.Models
 {
     public class Member
     {
@@ -26,5 +20,7 @@ namespace eHealthApp.Models
         public string? MembershipType { get; set; }
         public DateTime EnrollmentStart { get; set; }
         public DateTime EnrollmentEnd { get; set; }
+        public List<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
+        public List<MedicalClaim> MedicalClaims { get; set; } = new List<MedicalClaim>();
     }
 }

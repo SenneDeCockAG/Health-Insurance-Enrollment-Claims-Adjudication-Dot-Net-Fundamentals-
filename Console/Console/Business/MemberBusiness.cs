@@ -1,21 +1,14 @@
-﻿using eHealthApp.Models;
-using eHealthApp.Services;
+﻿using Console.Models;
 using eHealthApp.Services.Data;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace eHealthApp.Business
 {
     public class MemberBusiness
     {
-        private DatabaseContext _context;
+        private DataContext _context;
         private MemberService _service;
 
-        public MemberBusiness(DatabaseContext context)
+        public MemberBusiness(DataContext context)
         {
             _context = context;
             _service = new MemberService(_context);

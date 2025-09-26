@@ -1,16 +1,11 @@
-﻿using eHealthApp.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Console.Models;
 
 namespace eHealthApp.Services.Data
 {
     public class EnrollmentService : IDataService<Enrollment>
     {
-        private readonly DatabaseContext _context;
-        public EnrollmentService(DatabaseContext context)
+        private readonly DataContext _context;
+        public EnrollmentService(DataContext context)
         {
             _context = context;
         }

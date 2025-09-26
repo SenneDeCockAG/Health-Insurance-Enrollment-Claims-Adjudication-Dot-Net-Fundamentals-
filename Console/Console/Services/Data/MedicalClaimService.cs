@@ -1,4 +1,4 @@
-﻿using eHealthApp.Models;
+﻿using Console.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +9,8 @@ namespace eHealthApp.Services.Data
 {
     public class MedicalClaimService : IDataService<MedicalClaim>
     {
-        private readonly DatabaseContext _context;
-        public MedicalClaimService(DatabaseContext context)
+        private readonly DataContext _context;
+        public MedicalClaimService(DataContext context)
         {
             _context = context;
         }

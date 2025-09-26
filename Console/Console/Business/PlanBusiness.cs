@@ -1,4 +1,4 @@
-﻿using eHealthApp.Models;
+﻿using Console.Models;
 using eHealthApp.Services;
 using eHealthApp.Services.Data;
 using Microsoft.EntityFrameworkCore;
@@ -12,10 +12,10 @@ namespace eHealthApp.Business
 {
     public class PlanBusiness
     {
-        private DatabaseContext _context;
+        private DataContext _context;
         private PlanService _planService;
 
-        public PlanBusiness(DatabaseContext context)
+        public PlanBusiness(DataContext context)
         {
             _context = context;
             _planService = new PlanService(_context);

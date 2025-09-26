@@ -1,5 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
+using System.Xml.Serialization;
+
+namespace Console.Models;
 
 public class ClaimLine
 {
@@ -17,5 +22,7 @@ public class ClaimLine
     public decimal DeductibleApplied { get; set; }
     public decimal PlanPaidAmount { get; set; }
     public decimal MemberResponsibility { get; set; }
+    [JsonIgnore]
+    [XmlIgnore]
     public MedicalClaim? MedicalClaim { get; set; }
 }

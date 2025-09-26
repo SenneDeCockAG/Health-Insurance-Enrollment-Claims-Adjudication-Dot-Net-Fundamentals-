@@ -1,7 +1,11 @@
-﻿using eHealthApp.Models;
+﻿
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
+using System.Xml.Serialization;
 
+namespace Console.Models
+{
 public class MedicalClaim
 {
     [Key]
@@ -15,6 +19,15 @@ public class MedicalClaim
     public decimal TotalBilled { get; set; }
     public decimal TotalAllowed { get; set; }
 
+        [JsonIgnore]
+        [XmlIgnore]
     public Member? Member { get; set; }
-    public ICollection<ClaimLine> ClaimLines { get; set; } = [];
+        public List<ClaimLine> ClaimLines { get; set; } = [];
+
+        // public int ProviderId { get; set; }
+        // public Provider Provider { get; set; }
+        // public int EobId { get; set; }
+        // public Eob Eob { get; set; }
+    }
 }
+

@@ -1,11 +1,11 @@
-﻿using eHealthApp.Models;
-using eHealthApp.Services;
+﻿
+using Console.Models;
 
 namespace eHealthApp.Services.Data;
 public class MemberService : IDataService<Member>
 {
-    private readonly DatabaseContext _context;
-    public MemberService(DatabaseContext context)
+    private readonly DataContext _context;
+    public MemberService(DataContext context)
     {
         _context = context;
     }
