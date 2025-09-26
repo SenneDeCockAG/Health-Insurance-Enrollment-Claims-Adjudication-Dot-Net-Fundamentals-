@@ -2,7 +2,7 @@
 using eHealthApp.Services;
 
 namespace eHealthApp.Services.Data;
-public class MemberService
+public class MemberService : IDataService<Member>
 {
     private readonly DatabaseContext _context;
     public MemberService(DatabaseContext context)

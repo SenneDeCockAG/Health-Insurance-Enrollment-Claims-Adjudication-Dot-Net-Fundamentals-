@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace eHealthApp.Services.Data
 {
-    public class ClaimLineService
+    public class ClaimLineService : IDataService<ClaimLine>
     {
         private readonly DatabaseContext _context;
         public ClaimLineService(DatabaseContext context)

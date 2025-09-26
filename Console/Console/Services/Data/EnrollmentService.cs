@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace eHealthApp.Services.Data
 {
-    public class EnrollmentService
+    public class EnrollmentService : IDataService<Enrollment>
     {
         private readonly DatabaseContext _context;
         public EnrollmentService(DatabaseContext context)
