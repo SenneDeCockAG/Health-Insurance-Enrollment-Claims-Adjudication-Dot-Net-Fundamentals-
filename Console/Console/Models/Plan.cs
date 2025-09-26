@@ -1,12 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using System.ComponentModel.DataAnnotations;
 
-namespace Console.Models
+namespace Console.Models;
+
+public class Plan
 {
-    internal class Plan
-    {
-    }
+    [Key]
+    public int Id { get; set; }
+    [Required]
+    public string? PlanCode { get; set; }
+    [Required]
+    public string? PlanName { get; set; }
+    public decimal MonthlyPremium { get; set; }
+    public decimal Deductible { get; set; }
+    public decimal OutOfPocketMax { get; set; }
+    public bool HsaEligible { get; set; }
 }
