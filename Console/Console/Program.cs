@@ -4,6 +4,7 @@ using eHealthApp.Models;
 using eHealthApp.Services;
 using eHealthApp.Services.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace eHealthApp
 {
@@ -31,9 +32,6 @@ namespace eHealthApp
             // Enroll the member into the plan
             Enrollment enrollment1 = new Enrollment(member: member1, plan: plan1, enrollmentDate: DateTime.Today);
             enrollmentBusiness.CreateEnrollment(enrollment1);
-            
-
-
         }
     }
 }

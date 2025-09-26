@@ -13,23 +13,23 @@ namespace eHealthApp.Business
     public class MemberBusiness
     {
         private DatabaseContext _context;
-        private MemberService _memberService;
+        private MemberService _service;
 
         public MemberBusiness(DatabaseContext context)
         {
             _context = context;
-            _memberService = new MemberService(_context);
+            _service = new MemberService(_context);
         }
 
         public Member CreateMember(Member member)
         {
-            _memberService.Save(member);
+            _service.Save(member);
             return member;
         }
 
         public bool DeleteMember(Member member)
         {
-            _memberService.Delete(member);
+            _service.Delete(member);
             return true;
         }
     }

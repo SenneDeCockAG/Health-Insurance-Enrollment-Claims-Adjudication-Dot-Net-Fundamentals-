@@ -14,6 +14,8 @@ namespace eHealthApp.Services
         public DbSet<Member> Members => Set<Member>();
         public DbSet<Plan> Plans => Set<Plan>();
         public DbSet<Enrollment> Enrollments => Set<Enrollment>();
+        public DbSet<ClaimLine> ClaimLines => Set<ClaimLine>();
+        public DbSet<MedicalClaim> MedicalClaims => Set<MedicalClaim>();
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var projectRoot = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", ".."));
@@ -26,6 +28,8 @@ namespace eHealthApp.Services
             modelBuilder.Entity<Member>().ToTable("Members");
             modelBuilder.Entity<Plan>().ToTable("Plans");
             modelBuilder.Entity<Enrollment>().ToTable("Enrollments");
+            modelBuilder.Entity<ClaimLine>().ToTable("ClaimLines");
+            modelBuilder.Entity<MedicalClaim>().ToTable("MedicalClaims");
         }
     }
 }
