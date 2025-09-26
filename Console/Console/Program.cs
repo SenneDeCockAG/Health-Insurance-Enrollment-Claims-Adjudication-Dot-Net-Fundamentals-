@@ -1,37 +1,48 @@
-﻿using System;
-using eHealthApp.Business;
-using eHealthApp.Models;
+﻿using eHealthApp.Business.Process;
 using eHealthApp.Services;
-using eHealthApp.Services.Data;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace eHealthApp
+using System;
+class Program
 {
-    class Program
+    static bool keepAlive = true;
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        if (args.Length > 0)
         {
-            using var db = new DatabaseContext();
-            var created = db.Database.EnsureCreated();
-            Console.WriteLine($"EnsureCreated => {created}; DB at: {db.Database.GetDbConnection().DataSource}");
-
-            // Business Object
-            MemberBusiness memberBusiness = new MemberBusiness(db);
-            EnrollementBusiness enrollmentBusiness = new EnrollementBusiness(db);
-            PlanBusiness planBusiness = new PlanBusiness(db);
-
-            // Add 
-            Member member1 = new Member { FirstName = "Barack", LastName = "Obama", DateOfBirth = DateTime.Today, EnrollmentStart = DateTime.Today };
-            memberBusiness.CreateMember(member1);
-
-            // Add a plan
-            Plan plan1 = new Plan { PlanCode = "120", PlanName = "Retraite à 67 ans", MonthlyPremium = 10, Deductible = 1000, OutOfPocketMax = 200};
-            planBusiness.CreatePlan(plan1);
-
-            // Enroll the member into the plan
-            Enrollment enrollment1 = new Enrollment(member: member1, plan: plan1, enrollmentDate: DateTime.Today);
-            enrollmentBusiness.CreateEnrollment(enrollment1);
+            InterpretCommand(args);
+        }
+        else
+        {
+            Console.WriteLine("Welcome to the CLI. Type a command:");
+            while (keepAlive)
+            {
+                Console.Write("> ");
+                string input = Console.ReadLine()!;
+                string[] inputArgs = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                InterpretCommand(inputArgs);
+            }
         }
     }
+
+    static void InterpretCommand(string[] args)
+    {
+        if (args.Length == 0) return;
+
+        string command = args[0].ToLower();
+
+        switch (command)
+        {
+            case "enroll":
+                EnrollmentProcesses.StartEnrollmentProcess();
+                break;
+
+            case "exit":
+                keepAlive = false;
+                break;
+            default:
+                Console.WriteLine($"Unknown command: {command}");
+                break;
+        }
+    }
+
+    
 }

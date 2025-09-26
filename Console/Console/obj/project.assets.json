@@ -3218,23 +3218,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\XA1011\\.nuget\\packages\\": {},
+    "C:\\Users\\U07744\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\XA1011\\source\\repos\\SenneDeCockAG\\Health-Insurance-Enrollment-Claims-Adjudication-Dot-Net-Fundamentals-\\Console\\Console\\eHealthApp.csproj",
+      "projectUniqueName": "C:\\Users\\U07744\\re2\\Health-Insurance-Enrollment-Claims-Adjudication-Dot-Net-Fundamentals-\\Console\\Console\\eHealthApp.csproj",
       "projectName": "eHealthApp",
-      "projectPath": "C:\\Users\\XA1011\\source\\repos\\SenneDeCockAG\\Health-Insurance-Enrollment-Claims-Adjudication-Dot-Net-Fundamentals-\\Console\\Console\\eHealthApp.csproj",
-      "packagesPath": "C:\\Users\\XA1011\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\XA1011\\source\\repos\\SenneDeCockAG\\Health-Insurance-Enrollment-Claims-Adjudication-Dot-Net-Fundamentals-\\Console\\Console\\obj\\",
+      "projectPath": "C:\\Users\\U07744\\re2\\Health-Insurance-Enrollment-Claims-Adjudication-Dot-Net-Fundamentals-\\Console\\Console\\eHealthApp.csproj",
+      "packagesPath": "C:\\Users\\U07744\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\U07744\\re2\\Health-Insurance-Enrollment-Claims-Adjudication-Dot-Net-Fundamentals-\\Console\\Console\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\XA1011\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\U07744\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\MicroFocus.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3242,7 +3243,9 @@
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Micro Focus\\Enterprise Developer\\NuGetPackages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3260,8 +3263,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.300"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -3298,7 +3300,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.414/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
