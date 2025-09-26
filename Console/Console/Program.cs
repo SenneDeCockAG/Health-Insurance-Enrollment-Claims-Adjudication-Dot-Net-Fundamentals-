@@ -1,4 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
 using Console.Business;
 using Console.Infrastructure;
 using Console.Models;
@@ -53,5 +52,81 @@ planBusiness.CreatePlan(plan1);
 // Enroll the member into the plan
 Enrollment enrollment1 = new Enrollment(member: member1, plan: plan1, enrollmentDate: DateTime.Today);
 enrollmentBusiness.CreateEnrollment(enrollment1);
-System.Console.WriteLine("Program finished.");
-System.Console.ReadKey();
+System.Console.WriteLine("Static Program Finished\n" +
+                         "Starting command line interpretation !.");
+bool keepAlive = true;
+while (keepAlive)
+{
+    System.Console.Write("> ");
+    string input = System.Console.ReadLine()!;
+    string[] inputArgs = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+    InterpretCommand(inputArgs);
+}
+void InterpretCommand(string[] args)
+    {
+        if (args.Length == 0) return;
+
+        string command = args[0].ToLower();
+
+        switch (command)
+        {
+            case "help":
+            System.Console.WriteLine("List of commande availabe : " +
+                                     "  help : Gives a list of commande" +
+                                     "  addAffiliate : Start the process for adding a new member ");
+            break;
+            case "addaffiliate":
+                StartAffiliationProcess();
+                break;
+            case "listaffiliate":
+                ListAffiliate();
+                break;
+
+            case "exit":
+                keepAlive = false;
+                break;
+            default:
+                System.Console.WriteLine($"Unknown command: {command}");
+                break;
+        }
+    }
+
+void StartAffiliationProcess()
+{
+    System.Console.WriteLine("=== Enrollment Process ===");
+
+    System.Console.Write("Enter your first name: ");
+    string firstName = System.Console.ReadLine()!;
+
+    System.Console.Write("Enter your last name: ");
+    string lastName = System.Console.ReadLine()!;
+
+    DateTime birthday;
+    while (true)
+    {
+        System.Console.Write("Enter your birthday (yyyy-MM-dd): ");
+        string input = System.Console.ReadLine()!;
+
+        if (DateTime.TryParse(input, out birthday))
+            break;
+        else
+            System.Console.WriteLine("Invalid date format. Try again.");
+    }
+    Member addedMember = new Member { FirstName = firstName, LastName = lastName, DateOfBirth = birthday, EnrollmentStart = DateTime.Today };
+    memberBusiness.CreateMember(addedMember);
+    System.Console.WriteLine("\n--- Enrollment Summary ---");
+    System.Console.WriteLine($"Name: {firstName} {lastName}");
+    System.Console.WriteLine($"Birthday: {birthday:dddd, MMMM dd, yyyy}");
+}
+
+void ListAffiliate()
+{
+    List<Member> memberList = memberBusiness.ListMember();
+    int index = 0;
+    foreach (Member member in memberList)
+    {
+        System.Console.WriteLine($"{index}: {member.FirstName} {member.LastName}");
+        index++;
+    }
+
+}

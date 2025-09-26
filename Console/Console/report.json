@@ -250,5 +250,265 @@
       }
     ],
     "MedicalClaims": []
+  },
+  {
+    "Id": 5,
+    "FirstName": "Barack",
+    "LastName": "Obama",
+    "DateOfBirth": "2025-09-26T00:00:00",
+    "Email": null,
+    "Phone": null,
+    "AddressLine1": null,
+    "AddressLine2": null,
+    "City": null,
+    "State": null,
+    "PostalCode": null,
+    "Country": null,
+    "MembershipType": null,
+    "EnrollmentStart": "2025-09-26T00:00:00",
+    "EnrollmentEnd": "0001-01-01T00:00:00",
+    "Enrollments": [
+      {
+        "Id": 5,
+        "MemberId": 5,
+        "PlanId": 5,
+        "Plan": {
+          "Id": 5,
+          "PlanCode": "120",
+          "PlanName": "Retraite \u00E0 67 ans",
+          "MonthlyPremium": 10.0,
+          "Deductible": 1000.0,
+          "OutOfPocketMax": 200.0,
+          "HsaEligible": false
+        },
+        "EnrollmentDate": "2025-09-26T00:00:00",
+        "TerminationDate": "2026-09-26T00:00:00",
+        "Status": "ACTIVE"
+      }
+    ],
+    "MedicalClaims": []
+  },
+  {
+    "Id": 6,
+    "FirstName": "Barack",
+    "LastName": "Obama",
+    "DateOfBirth": "2025-09-26T00:00:00",
+    "Email": null,
+    "Phone": null,
+    "AddressLine1": null,
+    "AddressLine2": null,
+    "City": null,
+    "State": null,
+    "PostalCode": null,
+    "Country": null,
+    "MembershipType": null,
+    "EnrollmentStart": "2025-09-26T00:00:00",
+    "EnrollmentEnd": "0001-01-01T00:00:00",
+    "Enrollments": [
+      {
+        "Id": 6,
+        "MemberId": 6,
+        "PlanId": 6,
+        "Plan": {
+          "Id": 6,
+          "PlanCode": "120",
+          "PlanName": "Retraite \u00E0 67 ans",
+          "MonthlyPremium": 10.0,
+          "Deductible": 1000.0,
+          "OutOfPocketMax": 200.0,
+          "HsaEligible": false
+        },
+        "EnrollmentDate": "2025-09-26T00:00:00",
+        "TerminationDate": "2026-09-26T00:00:00",
+        "Status": "ACTIVE"
+      }
+    ],
+    "MedicalClaims": []
+  },
+  {
+    "Id": 7,
+    "FirstName": "Barack",
+    "LastName": "Obama",
+    "DateOfBirth": "2025-09-26T00:00:00",
+    "Email": null,
+    "Phone": null,
+    "AddressLine1": null,
+    "AddressLine2": null,
+    "City": null,
+    "State": null,
+    "PostalCode": null,
+    "Country": null,
+    "MembershipType": null,
+    "EnrollmentStart": "2025-09-26T00:00:00",
+    "EnrollmentEnd": "0001-01-01T00:00:00",
+    "Enrollments": [
+      {
+        "Id": 7,
+        "MemberId": 7,
+        "PlanId": 7,
+        "Plan": {
+          "Id": 7,
+          "PlanCode": "120",
+          "PlanName": "Retraite \u00E0 67 ans",
+          "MonthlyPremium": 10.0,
+          "Deductible": 1000.0,
+          "OutOfPocketMax": 200.0,
+          "HsaEligible": false
+        },
+        "EnrollmentDate": "2025-09-26T00:00:00",
+        "TerminationDate": "2026-09-26T00:00:00",
+        "Status": "ACTIVE"
+      }
+    ],
+    "MedicalClaims": []
+  },
+  {
+    "Id": 8,
+    "FirstName": "Barack",
+    "LastName": "Obama",
+    "DateOfBirth": "2025-09-26T00:00:00",
+    "Email": null,
+    "Phone": null,
+    "AddressLine1": null,
+    "AddressLine2": null,
+    "City": null,
+    "State": null,
+    "PostalCode": null,
+    "Country": null,
+    "MembershipType": null,
+    "EnrollmentStart": "2025-09-26T00:00:00",
+    "EnrollmentEnd": "0001-01-01T00:00:00",
+    "Enrollments": [
+      {
+        "Id": 8,
+        "MemberId": 8,
+        "PlanId": 8,
+        "Plan": {
+          "Id": 8,
+          "PlanCode": "120",
+          "PlanName": "Retraite \u00E0 67 ans",
+          "MonthlyPremium": 10.0,
+          "Deductible": 1000.0,
+          "OutOfPocketMax": 200.0,
+          "HsaEligible": false
+        },
+        "EnrollmentDate": "2025-09-26T00:00:00",
+        "TerminationDate": "2026-09-26T00:00:00",
+        "Status": "ACTIVE"
+      }
+    ],
+    "MedicalClaims": []
+  },
+  {
+    "Id": 9,
+    "FirstName": "Alice",
+    "LastName": "Dubouis",
+    "DateOfBirth": "1987-05-18T00:00:00",
+    "Email": null,
+    "Phone": null,
+    "AddressLine1": null,
+    "AddressLine2": null,
+    "City": null,
+    "State": null,
+    "PostalCode": null,
+    "Country": null,
+    "MembershipType": null,
+    "EnrollmentStart": "2025-09-26T00:00:00",
+    "EnrollmentEnd": "0001-01-01T00:00:00",
+    "Enrollments": [],
+    "MedicalClaims": []
+  },
+  {
+    "Id": 10,
+    "FirstName": "Barack",
+    "LastName": "Obama",
+    "DateOfBirth": "2025-09-26T00:00:00",
+    "Email": null,
+    "Phone": null,
+    "AddressLine1": null,
+    "AddressLine2": null,
+    "City": null,
+    "State": null,
+    "PostalCode": null,
+    "Country": null,
+    "MembershipType": null,
+    "EnrollmentStart": "2025-09-26T00:00:00",
+    "EnrollmentEnd": "0001-01-01T00:00:00",
+    "Enrollments": [
+      {
+        "Id": 9,
+        "MemberId": 10,
+        "PlanId": 9,
+        "Plan": {
+          "Id": 9,
+          "PlanCode": "120",
+          "PlanName": "Retraite \u00E0 67 ans",
+          "MonthlyPremium": 10.0,
+          "Deductible": 1000.0,
+          "OutOfPocketMax": 200.0,
+          "HsaEligible": false
+        },
+        "EnrollmentDate": "2025-09-26T00:00:00",
+        "TerminationDate": "2026-09-26T00:00:00",
+        "Status": "ACTIVE"
+      }
+    ],
+    "MedicalClaims": []
+  },
+  {
+    "Id": 11,
+    "FirstName": "Damien",
+    "LastName": "Decleire",
+    "DateOfBirth": "1924-08-18T00:00:00",
+    "Email": null,
+    "Phone": null,
+    "AddressLine1": null,
+    "AddressLine2": null,
+    "City": null,
+    "State": null,
+    "PostalCode": null,
+    "Country": null,
+    "MembershipType": null,
+    "EnrollmentStart": "2025-09-26T00:00:00",
+    "EnrollmentEnd": "0001-01-01T00:00:00",
+    "Enrollments": [],
+    "MedicalClaims": []
+  },
+  {
+    "Id": 12,
+    "FirstName": "Barack",
+    "LastName": "Obama",
+    "DateOfBirth": "2025-09-26T00:00:00",
+    "Email": null,
+    "Phone": null,
+    "AddressLine1": null,
+    "AddressLine2": null,
+    "City": null,
+    "State": null,
+    "PostalCode": null,
+    "Country": null,
+    "MembershipType": null,
+    "EnrollmentStart": "2025-09-26T00:00:00",
+    "EnrollmentEnd": "0001-01-01T00:00:00",
+    "Enrollments": [
+      {
+        "Id": 10,
+        "MemberId": 12,
+        "PlanId": 10,
+        "Plan": {
+          "Id": 10,
+          "PlanCode": "120",
+          "PlanName": "Retraite \u00E0 67 ans",
+          "MonthlyPremium": 10.0,
+          "Deductible": 1000.0,
+          "OutOfPocketMax": 200.0,
+          "HsaEligible": false
+        },
+        "EnrollmentDate": "2025-09-26T00:00:00",
+        "TerminationDate": "2026-09-26T00:00:00",
+        "Status": "ACTIVE"
+      }
+    ],
+    "MedicalClaims": []
   }
 ]
