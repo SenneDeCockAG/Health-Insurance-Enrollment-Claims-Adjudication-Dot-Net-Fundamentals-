@@ -6,6 +6,7 @@ using eHealthApp.Business;
 using eHealthApp.Services.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System.Net.Security;
 
 var services = new ServiceCollection()
     .AddScoped<IReporter, JsonReporter>()

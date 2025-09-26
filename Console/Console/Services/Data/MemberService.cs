@@ -5,6 +5,11 @@ namespace eHealthApp.Services.Data;
 public class MemberService : IDataService<Member>
 {
     private readonly DataContext _context;
+
+    public MemberService()
+    {
+        _context = new DataContext();
+    }
     public MemberService(DataContext context)
     {
         _context = context;
