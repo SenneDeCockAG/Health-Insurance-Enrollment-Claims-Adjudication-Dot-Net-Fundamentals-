@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using eHealthApp.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 namespace Console.Models
 {
@@ -9,6 +10,8 @@ namespace Console.Models
         public DbSet<Enrollment> Enrollments => Set<Enrollment>();
         public DbSet<MedicalClaim> MedicalClaims => Set<MedicalClaim>();
         public DbSet<ClaimLine> ClaimLines => Set<ClaimLine>();
+        public DbSet<Provider> Providers => Set<Provider>();
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -24,6 +27,12 @@ namespace Console.Models
             modelBuilder.Entity<Enrollment>().ToTable("Enrollments");
             modelBuilder.Entity<MedicalClaim>().ToTable("MedicalClaims");
             modelBuilder.Entity<ClaimLine>().ToTable("ClaimLines");
+            modelBuilder.Entity<Provider>().ToTable("Providers");
+
+            modelBuilder.Entity<MedicalClaim>()
+                        .HasOne(mc => mc.Provider)
+                        .WithMany(p => p.MedicalClaims)
+                        .HasForeignKey(mc => mc.ProviderId);
         }
 
         public void Seed()
@@ -32,6 +41,8 @@ namespace Console.Models
             Database.EnsureCreated();
             var members = Models.Seed.Create();
             Members.AddRange(members);
+
+
             SaveChanges();
         }
     }

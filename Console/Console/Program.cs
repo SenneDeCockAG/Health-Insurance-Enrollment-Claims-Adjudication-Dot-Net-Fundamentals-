@@ -12,12 +12,15 @@ var services = new ServiceCollection()
     .AddScoped<IAnalytics, Analytics>()
     .AddScoped<IBillingService, BillingService>()
     .AddScoped<INotifier, SmsNotifier>()
+    .AddScoped<DataContext>()
     .AddScoped<IDataService<Plan>, PlanService>()
+    .AddScoped<IDataService<Member>, MemberService>()
     .BuildServiceProvider();
 
 
 System.Console.WriteLine("Hello, World!");
 using var db = new DataContext();
+db.Database.EnsureDeleted();
 var created = await db.Database.EnsureCreatedAsync();
 System.Console.WriteLine($"EnsureCreated => {created}; DB at: {db.Database.GetDbConnection().DataSource}");
 
@@ -27,7 +30,7 @@ if (!await db.Members.AnyAsync())
 }
 using var scope = services.CreateScope();
 var jsonReporter = scope.ServiceProvider.GetService<IReporter>()!;
-var xmlReporter = new XmlReporter();
+var xmlReporter = new XmlReporter(scope.ServiceProvider.GetService<IDataService<Member>>());
 
 jsonReporter.CreateMembersReport();
 xmlReporter.CreateMembersReport();

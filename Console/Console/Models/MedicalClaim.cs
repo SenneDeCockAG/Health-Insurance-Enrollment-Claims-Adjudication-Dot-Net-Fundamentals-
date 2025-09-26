@@ -1,4 +1,5 @@
 ﻿
+using eHealthApp.Models;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
@@ -24,10 +25,11 @@ public class MedicalClaim
     public Member? Member { get; set; }
         public List<ClaimLine> ClaimLines { get; set; } = [];
 
-        // public int ProviderId { get; set; }
-        // public Provider Provider { get; set; }
         // public int EobId { get; set; }
         // public Eob Eob { get; set; }
+
+        public int ProviderId { get; set; }
+        public Provider? Provider { get; set; }
     }
 }
 

@@ -1,9 +1,42 @@
-﻿namespace Console.Models;
+﻿using eHealthApp.Models;
+
+namespace Console.Models;
 
 public static class Seed
 {
     public static List<Member> Create()
     {
+        var providers = new List<Provider>
+        {
+            new Provider
+            {
+                Npi = "1234567890",
+                Name = "Dr. Alice Smith",
+                Specialty = "Cardiology",
+                City = "Springfield",
+                State = "IL",
+                InNetwork = true
+            },
+            new Provider
+            {
+                Npi = "9876543210",
+                Name = "Dr. Bruno Martens",
+                Specialty = "Radiology",
+                City = "Bruxelles",
+                State = "Brussels-Capital",
+                InNetwork = true
+            },
+            new Provider
+            {
+                Npi = "1122334455",
+                Name = "Dr. Sofia Garcia",
+                Specialty = "Physiotherapy",
+                City = "Madrid",
+                State = "Madrid",
+                InNetwork = false
+            }
+        };
+
         var plans = new List<Plan>
         {
             new Plan
@@ -34,7 +67,7 @@ public static class Seed
                 HsaEligible = false
             }
         };
-        
+
         var members = new List<Member>
         {
             new Member
@@ -99,7 +132,17 @@ public static class Seed
                                 PlanPaidAmount = 96.00m,
                                 MemberResponsibility = 24.00m
                             }
+                        },
+                        Provider = new Provider
+                        {
+                            Npi = "1234567890",
+                            Name = "Dr. Alice Smith",
+                            Specialty = "Cardiology",
+                            City = "Springfield",
+                            State = "IL",
+                            InNetwork = true
                         }
+
                     }
                 }
             },
@@ -163,6 +206,15 @@ public static class Seed
                                 PlanPaidAmount = 120.00m,
                                 MemberResponsibility = 50.00m
                             }
+                        },
+                        Provider = new Provider
+                        {
+                            Npi = "9876543210",
+                            Name = "Dr. Bruno Martens",
+                            Specialty = "Radiology",
+                            City = "Bruxelles",
+                            State = "Brussels-Capital",
+                            InNetwork = true
                         }
                     }
                 }
@@ -216,11 +268,22 @@ public static class Seed
                                 PlanPaidAmount = 0.00m,
                                 MemberResponsibility = 180.00m
                             }
+                        },
+                        Provider = new Provider
+                        {
+                            Npi = "1122334455",
+                            Name = "Dr. Sofia Garcia",
+                            Specialty = "Physiotherapy",
+                            City = "Madrid",
+                            State = "Madrid",
+                            InNetwork = false
                         }
+                        
                     }
                 }
             }
         };
+
         return members;
     }
 }

@@ -1,5 +1,7 @@
 ﻿
 using Console.Infrastructure;
+using Console.Models;
+using eHealthApp.Services.Data;
 using System.Text.Json;
 
 namespace Console.Business;
@@ -7,11 +9,11 @@ namespace Console.Business;
 public class JsonReporter : IReporter
 {
     public static readonly string FILEPATH = Path.Combine("..", "..", "..", "report.json");
-    private readonly MemberService _memberService;
+    private readonly IDataService<Member> _memberService;
 
-    public JsonReporter()
+    public JsonReporter(IDataService<Member> memberService)
     {
-        _memberService = new MemberService();
+        _memberService = memberService;
     }
 
     public bool CreateMembersReport()
