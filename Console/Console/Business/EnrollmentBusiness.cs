@@ -3,15 +3,13 @@ using eHealthApp.Services.Data;
 
 namespace eHealthApp.Business
 {
-    public class EnrollementBusiness
+    public class EnrollmentBusiness
     {
-        private DataContext _context;
-        private EnrollmentService _enrollementService;
+        private IDataService<Enrollment> _enrollementService;
 
-        public EnrollementBusiness(DataContext context)
+        public EnrollmentBusiness(IDataService<Enrollment> ennrollmentService)
         {
-            _context = context;
-            _enrollementService = new EnrollmentService(_context);
+            _enrollementService = ennrollmentService;
         }
 
         public Enrollment CreateEnrollment(Enrollment enrollement)

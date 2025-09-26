@@ -1,6 +1,7 @@
 ﻿
 using Console.Infrastructure;
 using Console.Models;
+using eHealthApp.Services.Data;
 using System.Xml.Serialization;
 
 namespace Console.Business;
@@ -8,10 +9,10 @@ namespace Console.Business;
 public class XmlReporter : IReporter
 {
     public static readonly string FILEPATH = Path.Combine("..", "..", "..", "report.xml");
-    private readonly MemberService _memberService;
-    public XmlReporter()
+    private readonly IDataService<Member> _memberService;
+    public XmlReporter(IDataService<Member> memberService)
     {
-        _memberService = new MemberService();
+        _memberService = memberService;
     }
     public bool CreateMembersReport()
     {

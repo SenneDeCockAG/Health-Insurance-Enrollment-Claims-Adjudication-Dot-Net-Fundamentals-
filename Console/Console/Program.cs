@@ -11,12 +11,20 @@ var services = new ServiceCollection()
     .AddScoped<IAnalytics, Analytics>()
     .AddScoped<IBillingService, BillingService>()
     .AddScoped<INotifier, SmsNotifier>()
+    .AddScoped<DataContext>()
+    .AddScoped<EnrollmentBusiness>()
+    .AddScoped<MemberBusiness>()
+    .AddScoped<PlanBusiness>()
     .AddScoped<IDataService<Plan>, PlanService>()
+    .AddScoped<IDataService<Member>, MemberService>()
+    .AddScoped<IDataService<Enrollment>, EnrollmentService>()
     .BuildServiceProvider();
 
 
 System.Console.WriteLine("Hello, World!");
-using var db = new DataContext();
+using var scope = services.CreateScope();
+var db = scope.ServiceProvider.GetRequiredService<DataContext>();
+await db.Database.EnsureDeletedAsync();
 var created = await db.Database.EnsureCreatedAsync();
 System.Console.WriteLine($"EnsureCreated => {created}; DB at: {db.Database.GetDbConnection().DataSource}");
 
@@ -24,9 +32,9 @@ if (!await db.Members.AnyAsync())
 {
     db.Seed();
 }
-using var scope = services.CreateScope();
+
 var jsonReporter = scope.ServiceProvider.GetService<IReporter>()!;
-var xmlReporter = new XmlReporter();
+var xmlReporter = new XmlReporter(scope.ServiceProvider.GetService<IDataService<Member>>()!);
 
 jsonReporter.CreateMembersReport();
 xmlReporter.CreateMembersReport();
@@ -37,9 +45,9 @@ analytics.CreateAnalyticsReport();
 
 
 // Business Object
-MemberBusiness memberBusiness = new MemberBusiness(db);
-EnrollementBusiness enrollmentBusiness = new EnrollementBusiness(db);
-PlanBusiness planBusiness = new PlanBusiness(db);
+var enrollmentBusiness = scope.ServiceProvider.GetService<EnrollmentBusiness>()!;
+var memberBusiness = scope.ServiceProvider.GetService<MemberBusiness>()!;
+var planBusiness = scope.ServiceProvider.GetService<PlanBusiness>()!;
 
 // Add 
 Member member1 = new Member { FirstName = "Barack", LastName = "Obama", DateOfBirth = DateTime.Today, EnrollmentStart = DateTime.Today };
@@ -52,6 +60,7 @@ planBusiness.CreatePlan(plan1);
 // Enroll the member into the plan
 Enrollment enrollment1 = new Enrollment(member: member1, plan: plan1, enrollmentDate: DateTime.Today);
 enrollmentBusiness.CreateEnrollment(enrollment1);
+
 System.Console.WriteLine("Static Program Finished\n" +
                          "Starting command line interpretation !.");
 bool keepAlive = true;
@@ -130,3 +139,5 @@ void ListAffiliate()
     }
 
 }
+System.Console.WriteLine("Program finished.");
+System.Console.ReadKey();
